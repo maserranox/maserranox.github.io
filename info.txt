@@ -1,0 +1,45 @@
+files I added:
+_includes/main.css - contains all css that will overwrite original
+_includes/my-gallery.html - gallery of images
+_includes/project-gallery.html - added this as a project template
+
+header scss comes from 3-modules _header.scss
+	main page title is .logo__link
+	navigataion links are .nav__link
+_header.scss line 130 - background-color: is the dot above the nav links in .nav__link &::before
+
+
+scss variables are in 0-settings.scss
+
+
+article-tags are in 4-layouts/_home-page.scss
+
+menu bar actomatically pics up page titles from the _pages folder, you can see this in the _layouts/tag_page.html
+
+blog width is controlled by  page.html
+	column side line 19
+individual blog square sizing is foung in blog.html
+
+search bar: 3-modules/_search.scss
+	search results are also here
+
+
+brightness of hero image is found in 3-modules/_hero.scss  .hero__inner    background-color 
+
+blog html if you want for the last blog to only take up half of the page use pull-6 or push-6 on the class col:
+ex: <div class="article col col-6 col-d-6 col-t-12 pull-6 grid__post animate">
+ex: <div class="article col col-6 col-d-6 col-t-12 push-6 grid__post animate">
+
+tags in post pages can be changed in: 4-layouts/_posts.scss
+	background-color: $brand-color (is original)
+
+fixed tag links a urls:
+	4-layouts/_tags-page.scss .archive-title {
+  text-transform: capitalize; /* Added so capitalize titles, because we need urls and tags to be lower case for the urls to work
+  since the url picks up the tags and uses the way they're spelled to create the urls*/
+
+when clicking on a tag and takes you too to the page where all the same tag articles are, the page format is handled by:
+  	article-content.html
+
+ when adding a page to _posts, 3 things must be in order:
+ 	
